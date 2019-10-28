@@ -84,33 +84,33 @@ public class CreateNewBidPage extends TestBase{
 	}
 
 	public boolean isCRMIDTextBoxDisplayed() {
-		//return (CRMID.isDisplayed());
-		return(driver.findElement(By.xpath("//input[@title='CRM ID Required Field']")).isDisplayed());
+		return (CRMID.isDisplayed());
+		//return(driver.findElement(By.xpath("//input[@title='CRM ID Required Field']")).isDisplayed());
 	}
 
 	public boolean isCRMIDTextBoxEnabled() {
-		//return (CRMID.isEnabled());
-		return(driver.findElement(By.xpath("//input[@title='CRM ID Required Field']")).isEnabled());
+		return (CRMID.isEnabled());
+		//return(driver.findElement(By.xpath("//input[@title='CRM ID Required Field']")).isEnabled());
 	}
 
 	public boolean isBidTitleTextBoxDisplayed() {
-		//return (BidTitle.isDisplayed());
-		return(driver.findElement(By.xpath("//input[@title='Bid Title Required Field']")).isDisplayed());
+		return (BidTitle.isDisplayed());
+		//return(driver.findElement(By.xpath("//input[@title='Bid Title Required Field']")).isDisplayed());
 	}
 
 	public boolean isBidTitleTextBoxEnabled() {
-		//return (BidTitle.isEnabled());
-		return(driver.findElement(By.xpath("//input[@title='Bid Title Required Field']")).isEnabled());
+		return (BidTitle.isEnabled());
+		//return(driver.findElement(By.xpath("//input[@title='Bid Title Required Field']")).isEnabled());
 	}
 
 	public boolean isClientNameTextBoxDisplayed() {
-		//return (ClientName.isDisplayed());
-		return(driver.findElement(By.xpath("//input[@title='Client Name Required Field']")).isDisplayed());
+		return (ClientName.isDisplayed());
+		//return(driver.findElement(By.xpath("//input[@title='Client Name Required Field']")).isDisplayed());
 	}
 
 	public boolean isClientNameTextBoxEnabled() {
-		//return (ClientName.isEnabled());
-		return(driver.findElement(By.xpath("//input[@title='Client Name Required Field']")).isEnabled());
+		return (ClientName.isEnabled());
+		//return(driver.findElement(By.xpath("//input[@title='Client Name Required Field']")).isEnabled());
 	}
 
 	public boolean isBidEventTypeTextBoxDisplayed() {
