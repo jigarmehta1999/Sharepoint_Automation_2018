@@ -3,7 +3,7 @@ package com.sharepoint.qa.runner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(	features = {"src\\test\\resources\\com\\sharepoint\\qa\\features\\CreateNewBidFieldVerification.feature"},
+@CucumberOptions(	features = {"src\\test\\resources\\com\\sharepoint\\qa\\features\\NewBid.feature"},
 					glue = {"com.sharepoint.qa.steps"},
 					dryRun = false,
 					strict = true,
