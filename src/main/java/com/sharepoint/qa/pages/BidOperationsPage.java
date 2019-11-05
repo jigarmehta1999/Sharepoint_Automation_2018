@@ -38,7 +38,8 @@ public class BidOperationsPage extends TestBase{
 		CreateNewBid.click();
 	}
 	
-	public void switchToCreateNewBidFrame() {
+	public void switchToCreateNewBidFrame() throws InterruptedException {
+		Thread.sleep(3000);
 		driver.switchTo().frame(CreateNewBidFrame);
 	}
 	

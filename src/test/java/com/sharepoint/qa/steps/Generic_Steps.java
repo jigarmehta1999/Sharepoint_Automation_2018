@@ -113,6 +113,7 @@ public class Generic_Steps extends TestBase {
 				test.log(Status.PASS, "Bid creation is successful. Bid number " + CRMID);
 				test.log(Status.INFO, "Bid url = " + bidlisturl);
 				bidcreated = true;
+				driver.navigate().to(bidlisturl);
 				break;
 			}
 			Thread.sleep(1000);

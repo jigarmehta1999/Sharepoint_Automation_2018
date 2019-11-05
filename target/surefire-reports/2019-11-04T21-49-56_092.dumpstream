@@ -1,0 +1,4 @@
+# Created at 2019-11-04T21:49:56.826
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Eclipse SimRel WorkSpace\Sharepoint_Automation_2018\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
