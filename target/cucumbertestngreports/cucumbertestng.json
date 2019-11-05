@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13729122222,
+              "duration": 17845418628,
               "status": "passed"
             },
             "line": 4,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-11-05T13:49:58.518Z",
+        "start_timestamp": "2019-11-05T14:57:23.495Z",
         "line": 11,
         "name": "Create New bids",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 11309693163,
+              "duration": 11404026809,
               "status": "passed"
             },
             "line": 7,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 17709195772,
+              "duration": 36086683838,
               "status": "passed"
             },
             "line": 8,
