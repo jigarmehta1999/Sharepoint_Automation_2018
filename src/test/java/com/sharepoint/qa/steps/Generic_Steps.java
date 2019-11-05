@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
 
 import org.testng.asserts.SoftAssert;
 
@@ -25,7 +26,7 @@ public class Generic_Steps extends TestBase {
 	@Then("Create new bids with values (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*)")
 	public void create_new_bids(String BidTitle, String ClientName, String BidEventType, String BidManager,
 			String SalesLead, String SensitivityLevel, String Notes, String SecurityClearanceRequirements,
-			String SubmissionInstructions) throws InterruptedException {
+			String SubmissionInstructions) throws InterruptedException, ParseException {
 		System.out.println("BidTitle = " + BidTitle);
 		System.out.println("ClientName = " + ClientName);
 		System.out.println("BidEventType = " + BidEventType);
@@ -90,7 +91,7 @@ public class Generic_Steps extends TestBase {
 
 		HttpURLConnection huc = null;
 		try {
-			huc = (HttpURLConnection) (new URL(url).openConnection());
+			huc = (HttpURLConnection) (new URL(bidlisturl).openConnection());
 			huc.setRequestMethod("HEAD");
 			huc.connect();
 		} catch (Exception e) {
@@ -113,6 +114,7 @@ public class Generic_Steps extends TestBase {
 				test.log(Status.PASS, "Bid creation is successful. Bid number " + CRMID);
 				test.log(Status.INFO, "Bid url = " + bidlisturl);
 				bidcreated = true;
+				Thread.sleep(5000);
 				driver.navigate().to(bidlisturl);
 				break;
 			}

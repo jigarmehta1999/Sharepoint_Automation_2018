@@ -1,10 +1,17 @@
 package com.sharepoint.qa.pages;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -250,13 +257,16 @@ public class CreateNewBidPage extends TestBase{
 		Thread.sleep(500);
 	}
 
-	public String setSubmissonDate() throws InterruptedException {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");  
-		LocalDateTime now = LocalDateTime.now();
-		String formattedLocalDate = dtf.format(now);
-		this.SubmissonDate.sendKeys(formattedLocalDate);
-		Thread.sleep(500);
-		return formattedLocalDate;
+	public String setSubmissonDate() throws InterruptedException, ParseException {
+		String nextDayDate = "";
+		
+		LocalDate date = LocalDate.now();
+		date = date.plusDays(1);
+		org.joda.time.format.DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/yyyy");
+		nextDayDate = date.toString(fmt);
+		System.out.println(nextDayDate);
+		this.SubmissonDate.sendKeys(nextDayDate);
+		return nextDayDate;
 	}
 
 	public void setBidManager(String BidManager) throws InterruptedException {
