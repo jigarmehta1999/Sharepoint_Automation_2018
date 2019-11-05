@@ -115,7 +115,9 @@ public class Generic_Steps extends TestBase {
 				test.log(Status.INFO, "Bid url = " + bidlisturl);
 				bidcreated = true;
 				Thread.sleep(5000);
-				driver.navigate().to(bidlisturl);
+				if(prop.get("browser").equals("chrome") || prop.get("browser").equals("FF")) {
+					driver.navigate().to(bidlisturl);
+				}
 				break;
 			}
 			Thread.sleep(1000);
